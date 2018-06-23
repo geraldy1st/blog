@@ -4,11 +4,13 @@ Work in progress
 
 ## Version
 ```
-rudy 2.4.0
+ruby 2.4.0
 ```
 ### Navigator recommended
 ```
 Chrome / FireFox
 ```
-
+### Features
+```
 ¯\_(ツ)_/¯
+``
