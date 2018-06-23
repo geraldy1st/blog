@@ -3268,3 +3268,513 @@ Completed 200 OK in 78ms (Views: 70.4ms | ActiveRecord: 1.1ms)
   ↳ bin/rails:9
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/articles" for 127.0.0.1 at 2018-06-23 22:57:24 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (40.5ms)
+Completed 200 OK in 192ms (Views: 170.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2018-06-23 22:57:28 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (17.0ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.3ms)
+
+
+
+NoMethodError - undefined method `comments' for #<Article:0x007f84edd33f50>
+Did you mean?  committed!:
+  app/views/articles/show.html.erb:11:in `_app_views_articles_show_html_erb___1063904966339279157_70104451225200'
+
+Started POST "/__better_errors/65516c951253cc0a/variables" for 127.0.0.1 at 2018-06-23 22:57:28 +0200
+Started GET "/" for 127.0.0.1 at 2018-06-23 22:59:55 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-06-23 22:59:57 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (4.1ms)
+  Rendered articles/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 55ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-06-23 23:00:23 +0200
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xq1saLLZWxVUV2Mr7Xwlb50yqg/v2r1X5O/hmtywOAmI+2X+QfAQ85A11ZZ7WZ57cxx8k186phngxwzU/ifSJQ==", "article"=>{"title"=>"esport event", "text"=>"new tekken tournament on the way"}, "commit"=>"Create Article"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:21
+  [1m[36mArticle Create (2.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "esport event"], ["text", "new tekken tournament on the way"], ["created_at", "2018-06-23 21:00:23.166990"], ["updated_at", "2018-06-23 21:00:23.166990"]]
+  ↳ app/controllers/articles_controller.rb:21
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:21
+Redirected to http://localhost:3000/articles/11
+Completed 302 Found in 14ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/articles/11" for 127.0.0.1 at 2018-06-23 23:00:23 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.3ms)
+
+
+
+NoMethodError - undefined method `comments' for #<Article:0x007f84ebf8f8a0>
+Did you mean?  committed!:
+  app/views/articles/show.html.erb:11:in `_app_views_articles_show_html_erb___1063904966339279157_70104435680640'
+
+Started POST "/__better_errors/e4a088681afa21bf/variables" for 127.0.0.1 at 2018-06-23 23:00:23 +0200
+Started GET "/articles/11/comment" for 127.0.0.1 at 2018-06-23 23:10:49 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/articles/11/comment"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/articles/11/comment" for 127.0.0.1 at 2018-06-23 23:13:05 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/articles/11/comment"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/articles/11/" for 127.0.0.1 at 2018-06-23 23:13:08 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 114ms (Views: 86.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/articles/11/comments" for 127.0.0.1 at 2018-06-23 23:13:33 +0200
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jesQiSRtCeOf3TmmfHHVwRtQ1q5enFOF9uVE12mAGP0E0pKRTjlgokAzfV4Nr9SGJQpcpGGo7DiqCMrAYyQ9wg==", "comment"=>{"commenter"=>"the best new ever", "body"=>"that a com"}, "commit"=>"Create Comment", "article_id"=>"11"}
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[36mComment Create (1.3ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", "the best new ever"], ["body", "that a com"], ["article_id", 11], ["created_at", "2018-06-23 21:13:34.012325"], ["updated_at", "2018-06-23 21:13:34.012325"]]
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+Redirected to http://localhost:3000/articles/11
+Completed 302 Found in 13ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/articles/11" for 127.0.0.1 at 2018-06-23 23:13:34 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 45ms (Views: 38.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-23 23:13:43 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 39ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-06-23 23:13:45 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 52ms (Views: 44.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2018-06-23 23:13:48 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 50ms (Views: 42.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2018-06-23 23:13:53 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:15
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.7ms)
+  Rendered articles/edit.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 52ms (Views: 42.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-06-23 23:13:57 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 56ms (Views: 48.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-06-23 23:48:07 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 36ms (Views: 31.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-23 23:48:09 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 40ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-06-23 23:48:11 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 43ms (Views: 37.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2018-06-23 23:48:18 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 50ms (Views: 38.5ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/articles/1/comments" for 127.0.0.1 at 2018-06-23 23:48:27 +0200
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z56GeAVTCVoq7EOZPNQpNLcJPHMirgiccogj4C7XJZ7a8Umxept66ZER9iLTDVMwtC+BcdF0uDx1RKCqpj3fXA==", "comment"=>{"commenter"=>"de", "body"=>"ddeed"}, "commit"=>"Create Comment", "article_id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[36mComment Create (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", "de"], ["body", "ddeed"], ["article_id", 1], ["created_at", "2018-06-23 21:48:27.618757"], ["updated_at", "2018-06-23 21:48:27.618757"]]
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 17ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2018-06-23 23:48:27 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 49ms (Views: 40.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2018-06-23 23:48:33 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:15
+  Rendering articles/edit.html.erb within layouts/application
+Started GET "/articles/1/edit" for 127.0.0.1 at 2018-06-23 23:48:33 +0200
+  Rendered articles/_form.html.erb (4.7ms)
+Processing by ArticlesController#edit as HTML
+  Rendered articles/edit.html.erb within layouts/application (11.3ms)
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:15
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.5ms)
+  Rendered articles/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 84ms (Views: 78.6ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 60ms (Views: 51.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-06-23 23:48:35 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 46ms (Views: 40.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-23 23:51:09 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 57ms (Views: 51.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles/2/comments" for 127.0.0.1 at 2018-06-23 23:51:30 +0200
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HPHfsi4aJseX2ip6v5C0YE3z+WWCnZpQ7FDCvbUyIcQOYola937X3dvjuTpCd6NW067oo/dDckGBe8ahxShV+w==", "comment"=>{"commenter"=>"this a comment", "body"=>"here is my comment"}, "commit"=>"Create Comment", "article_id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[36mComment Create (1.1ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", "this a comment"], ["body", "here is my comment"], ["article_id", 2], ["created_at", "2018-06-23 21:51:30.671817"], ["updated_at", "2018-06-23 21:51:30.671817"]]
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+Redirected to http://localhost:3000/articles/2
+Completed 302 Found in 11ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-23 23:51:30 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 44ms (Views: 36.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-24 00:00:20 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 348ms (Views: 317.0ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/articles/2/comments" for 127.0.0.1 at 2018-06-24 00:00:41 +0200
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"13n7TMUl13cK19qw8A7F7EZ4xMK3NxBQUz8vGLbEhKJeQHlUr3G+NtU5nkiB0MSreCJOyIgDr+0P0qEPvGChnQ==", "comment"=>{"commenter"=>"this is normal", "body"=>"this is another test"}, "commit"=>"Create Comment", "article_id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[36mComment Create (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", "this is normal"], ["body", "this is another test"], ["article_id", 2], ["created_at", "2018-06-23 22:00:41.223829"], ["updated_at", "2018-06-23 22:00:41.223829"]]
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+Redirected to http://localhost:3000/articles/2
+Completed 302 Found in 9ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-24 00:00:41 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 43ms (Views: 36.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-24 00:00:50 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 36ms (Views: 31.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/articles/2/comments" for 127.0.0.1 at 2018-06-24 00:03:28 +0200
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AQReozBB28+2RlEGi0EM9S4apc3JcymOgY+6xEig8WSIPdy7WhWyjmmoFf76nw2yEEAvx/ZHljPdYjTTQgTUWw==", "comment"=>{"commenter"=>"", "body"=>""}, "commit"=>"Create Comment", "article_id"=>"2"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[36mComment Create (0.9ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", ""], ["body", ""], ["article_id", 2], ["created_at", "2018-06-23 22:03:28.342254"], ["updated_at", "2018-06-23 22:03:28.342254"]]
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+Redirected to http://localhost:3000/articles/2
+Completed 302 Found in 11ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-24 00:03:28 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 36ms (Views: 28.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles/2/comments" for 127.0.0.1 at 2018-06-24 00:03:29 +0200
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MDbJqakeqlDC7iua7FMpe7DtaKhhUPto6zOUBlUZk1i5D0uxw0rDER0Ab2KdjSg8jrfiol5kRNW33hoRX722Zw==", "comment"=>{"commenter"=>"", "body"=>""}, "commit"=>"Create Comment", "article_id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[36mComment Create (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", ""], ["body", ""], ["article_id", 2], ["created_at", "2018-06-23 22:03:29.649646"], ["updated_at", "2018-06-23 22:03:29.649646"]]
+  ↳ app/controllers/comments_controller.rb:4
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:4
+Redirected to http://localhost:3000/articles/2
+Completed 302 Found in 12ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-24 00:03:29 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 49ms (Views: 42.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-24 00:06:30 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (24.0ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.2ms)
+
+
+
+NoMethodError - undefined method `title' for nil:NilClass:
+  app/views/articles/show.html.erb:13:in `_app_views_articles_show_html_erb___3604379545943133713_70306499034340'
+
+Started POST "/__better_errors/bab135ceb0f3cec4/variables" for 127.0.0.1 at 2018-06-24 00:06:30 +0200
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-24 00:07:40 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.3ms)
+
+
+
+NameError - uninitialized constant ArticlesController::Comments:
+  app/controllers/articles_controller.rb:8:in `show'
+
+Started POST "/__better_errors/af5baedbebc52972/variables" for 127.0.0.1 at 2018-06-24 00:07:40 +0200
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-24 00:07:53 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 1.3ms)
+
+
+
+NoMethodError - undefined method `title' for nil:NilClass:
+  app/views/articles/show.html.erb:13:in `_app_views_articles_show_html_erb___3604379545943133713_70306532644140'
+
+Started POST "/__better_errors/0c8d2ed25212c083/variables" for 127.0.0.1 at 2018-06-24 00:07:53 +0200
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-24 00:08:24 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 67ms (Views: 59.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-24 00:09:04 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 38ms (Views: 33.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-24 00:09:57 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:12
+  Rendered articles/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 41ms (Views: 36.6ms | ActiveRecord: 0.4ms)
+
+
