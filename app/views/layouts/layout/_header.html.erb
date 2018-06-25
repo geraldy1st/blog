@@ -1,7 +1,13 @@
 <nav>
   <h1>My Blog!</h1>
   <ul>
-    <li>Login</li>
-    <li>Sign up</li>
+    <% if user_signed_in? %>
+    <li><%= current_user.email %></li>
+    <li><%= link_to "Edit Account", edit_user_registration_path %></li>
+    <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+    <% else %>
+    <li><%= link_to "Login", new_user_session_path %></li>
+    <li><%= link_to "Sign up", new_user_registration_path %></li>
+    <% end %>
   </ul>
 </nav>

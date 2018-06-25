@@ -4,7 +4,7 @@
 nav{
   display: flex;
   margin: auto;
-  background-color: rgba(20,20,20,.9);
+  background-color: rgba(254, 164, 127,1.0);
   color: #EEE;
   text-align: left;
   height: 10vh;
@@ -23,12 +23,12 @@ nav{
 }
 
 .welcome{
-  background-image: url('https://images.pexels.com/photos/594388/vinyl-record-player-retro-594388.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-  background-size: cover;
-  background-position: center;
+  // background-image: url('https://images.pexels.com/photos/594388/vinyl-record-player-retro-594388.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  // background-size: cover;
+  // background-position: center;
   height: 90vh;
   ul{
-    background-color: rgba(20,20,20,.5);
+    background-color: rgba(254, 164, 127,.5);
     width: 100%;
     display: flex;
     padding: 20px 0;
