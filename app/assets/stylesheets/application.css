@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Monoton|Quicksand');
+*,html,body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+h1{
+  font-family: 'Monoton', cursive;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}

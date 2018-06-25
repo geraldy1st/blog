@@ -1,5 +1,13 @@
-<h1>My Blog!</h1>
-<%= link_to 'Listing articles', controller: 'articles' %>
-
-<br>
-<%= link_to 'New article', new_article_path %>
+<nav>
+  <h1>My Blog!</h1>
+  <ul>
+    <li>Login</li>
+    <li>Sign up</li>
+  </ul>
+</nav>
+<div class="welcome">
+  <ul>
+    <li><%= link_to 'Listing articles', controller: 'articles' %></li>
+    <li><%= link_to 'New article', new_article_path %></li>
+  </ul>
+</div>

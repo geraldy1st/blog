@@ -1,3 +1,46 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+nav{
+  display: flex;
+  margin: auto;
+  background-color: rgba(20,20,20,.9);
+  color: #EEE;
+  text-align: left;
+  height: 10vh;
+  h1{
+    flex: 1;
+    margin: auto;
+    padding-left: 10px
+  }
+  ul{
+    justify-content: flex-end;
+    margin: auto;
+  }
+  ul li{
+    display: inline;
+  }
+}
+
+.welcome{
+  background-image: url('https://images.pexels.com/photos/594388/vinyl-record-player-retro-594388.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  ul{
+    background-color: rgba(20,20,20,.5);
+    width: 100%;
+    display: flex;
+    padding: 20px 0;
+    li{
+      padding: 5px 10px;
+      margin: auto;
+      text-align: center;
+    }
+    a{
+      color: #FFF;
+      background-color: #AAA;
+      padding: 5px 10px;
+    }
+  }
+}
