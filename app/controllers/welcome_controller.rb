@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @articles = Article.all
+    @articles = Article.limit(10)
   end
 end
