@@ -16,8 +16,8 @@
 
  /* font */
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
-@import url('https://fonts.googleapis.com/css?family=Monoton|Quicksand');
-
+@import url('https://fonts.googleapis.com/css?family=Galada');
+@import url('https://fonts.googleapis.com/css?family=Hind');
 /* colors */
 
 
@@ -27,7 +27,7 @@
   font-family: 'Quicksand', sans-serif;
 }
 h1{
-  font-family: 'Monoton', cursive;
+  font-family: 'Hind', cursive;
 }
 li{
   list-style: none;

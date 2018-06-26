@@ -21,10 +21,10 @@ nav{
     }
   }
   ul{
-    justify-content: flex-end;
+    flex: 1;
     margin: auto;
   }
-  ul li{
+  li{
     display: inline;
   }
 }
@@ -39,6 +39,7 @@ nav{
     width: 100%;
     display: flex;
     padding: 20px 0;
+
     li{
       padding: 5px 10px;
       margin: auto;
@@ -46,7 +47,7 @@ nav{
     }
     a{
       color: #FFF;
-      background-color: #AAA;
+      background-color: rgba(10, 189, 227,1);
       padding: 5px 10px;
     }
   }
@@ -55,13 +56,32 @@ nav{
   width: 100%;
   .post-header{
     width: 60%;
-    background-color: rgba(10, 189, 227,.1);
-    margin: 0 auto;
+    margin: 20px auto;
+    color: rgba(10, 189, 227,1);
+    p{
+      color: #888;
+    }
   }
   .post{
-    margin: 10px;
+    background-color: rgba(150, 160, 250, .1);
+    display: flex;
+    flex-direction: column;
+    width: 90vh;
+    margin: 10px auto 30px auto;
     img{
       width: 100%;
+      margin:auto;
+    }
+    h3{
+      font-family: 'Galada', cursive;
+      color: rgba(10, 189, 227,1);
+      font-weight: bold;
+      font-size: 1.5em;
+      padding-left: 10px;
+    }
+    p{
+      background-color: rgba(150, 160, 250, .1);
+      padding: 10px;
     }
   }
 }
