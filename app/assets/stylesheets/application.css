@@ -35,3 +35,11 @@ li{
 a{
   text-decoration: none;
 }
+.wrapper{
+  margin: 0 auto;
+  text-align: center;
+}
+footer{
+  background-color: rgba(10, 189, 227,1.0);
+  padding: 10px;
+}

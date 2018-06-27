@@ -1,16 +1,23 @@
 <div class="content-top">
   <img src="https://thumb.canalplus.pro/http/unsafe/992x/smart/creativemedia-image.canalplus.pro/content/0001/05/8620dcd7c98260c452f34a9052dafc0a8585344a.jpeg" alt="">
   <h3><%= @article.title %></h3>
-  <p><%= @article.created_at %></p>
+  <p class="date"><%= @article.created_at %></p>
   <p><%= @article.text %></p>
 </div>
 <div class="content-mid">
+  <div class="banner-mid">
+    <h2>What do you think?</h2>
+  </div>
+  img or random animation...
+</div>
+<div class="content-low">
+  <h2>Express yourself</h2>
+  <%= render 'comments/form' %>
+  <div class="wrapper">
+    <%= link_to 'home', root_path %>|
+    <%= link_to 'Edit', edit_article_path(@article) %> |
+    <%= link_to 'Back', articles_path %>
+  </div>
   <h2>Comments</h2>
   <%= render @article.comments %>
-
-  <h2>Add a comment:</h2>
-  <%= render 'comments/form' %>
 </div>
-<%= link_to 'home', root_path %>|
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
