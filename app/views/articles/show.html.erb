@@ -4,19 +4,18 @@
   <p class="date"><%= @article.created_at %></p>
   <p><%= @article.text %></p>
 </div>
+
 <div class="content-mid">
   <div class="banner-mid">
     <h2>What do you think?</h2>
   </div>
   img or random animation...
 </div>
+
 <div class="content-low">
   <h2>Express yourself</h2>
-  <%= render 'comments/form' %>
   <div class="wrapper">
-    <%= link_to 'home', root_path %>|
-    <%= link_to 'Edit', edit_article_path(@article) %> |
-    <%= link_to 'Back', articles_path %>
+  <%= render 'comments/form' %>
   </div>
   <h2>Comments</h2>
   <%= render @article.comments %>
