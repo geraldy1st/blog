@@ -10736,3 +10736,1878 @@ Processing by ArticlesController#show as HTML
 Completed 200 OK in 125ms (Views: 117.0ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 15:15:35 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (362.2ms)
+  Rendered articles/show.html.erb within layouts/application (386.6ms)
+Completed 500 Internal Server Error in 432ms (ActiveRecord: 0.9ms)
+
+
+
+NoMethodError - undefined method `sign_in?' for #<#<Class:0x007fab647adea8>:0x007fab67d858a0>
+Did you mean?  signed_in?:
+  app/views/comments/_form.html.erb:13:in `block in _app_views_comments__form_html_erb___1117576205418847416_70187027270040'
+  app/views/comments/_form.html.erb:2:in `_app_views_comments__form_html_erb___1117576205418847416_70187027270040'
+  app/views/articles/show.html.erb:18:in `_app_views_articles_show_html_erb___3521715805492980049_70187079185340'
+
+Started POST "/__better_errors/bb84d60660b9266d/variables" for 127.0.0.1 at 2018-06-27 15:15:36 +0200
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 15:15:47 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (248.0ms)
+  Rendered articles/show.html.erb within layouts/application (251.9ms)
+Completed 500 Internal Server Error in 271ms (ActiveRecord: 0.3ms)
+
+
+
+NoMethodError - undefined method `user_sign_in?' for #<#<Class:0x007fab647adea8>:0x007fab619a0920>
+Did you mean?  user_signed_in?:
+  app/views/comments/_form.html.erb:13:in `block in _app_views_comments__form_html_erb___1117576205418847416_70187037000280'
+  app/views/comments/_form.html.erb:2:in `_app_views_comments__form_html_erb___1117576205418847416_70187037000280'
+  app/views/articles/show.html.erb:18:in `_app_views_articles_show_html_erb___3521715805492980049_70187026811700'
+
+Started POST "/__better_errors/8a93007c38aa39f0/variables" for 127.0.0.1 at 2018-06-27 15:15:48 +0200
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 15:16:52 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (7.9ms)
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:21
+  Rendered collection of comments/_comment.html.erb [3 times] (8.0ms)
+  Rendered articles/show.html.erb within layouts/application (24.9ms)
+  Rendered layouts/layout/_header.html.erb (1.2ms)
+  Rendered layouts/layout/_footer.html.erb (1.0ms)
+Completed 200 OK in 96ms (Views: 90.6ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-06-27 15:16:57 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XlbrN+eUJB1Yfb2Igoe0rnMsasEJPAgTfsRovNplZKu0MrrOpTJMb+8qqS9Equg3fQb+zECPrmpbVbD9BJ6zuw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-27 15:16:57 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 6]]
+  ↳ app/views/welcome/index.html.erb:14
+  Rendered welcome/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/layout/_header.html.erb (4.7ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 51ms (Views: 46.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-06-27 15:17:01 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/layout/_header.html.erb (0.8ms)
+  Rendered layouts/layout/_footer.html.erb (0.5ms)
+Completed 200 OK in 69ms (Views: 60.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2018-06-27 15:17:04 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (6.7ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.erb:21
+  Rendered collection of comments/_comment.html.erb [3 times] (1.4ms)
+  Rendered articles/show.html.erb within layouts/application (21.5ms)
+  Rendered layouts/layout/_header.html.erb (1.4ms)
+  Rendered layouts/layout/_footer.html.erb (0.8ms)
+Completed 200 OK in 117ms (Views: 108.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2018-06-27 15:17:30 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (4.6ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.erb:21
+  Rendered collection of comments/_comment.html.erb [3 times] (1.1ms)
+  Rendered articles/show.html.erb within layouts/application (13.1ms)
+  Rendered layouts/layout/_header.html.erb (0.7ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 68ms (Views: 52.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2018-06-27 15:19:45 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (4.1ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.erb:21
+  Rendered collection of comments/_comment.html.erb [3 times] (1.2ms)
+  Rendered articles/show.html.erb within layouts/application (13.5ms)
+  Rendered layouts/layout/_header.html.erb (0.8ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 66.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2018-06-27 15:21:52 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (4.2ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.erb:21
+  Rendered collection of comments/_comment.html.erb [3 times] (1.5ms)
+  Rendered articles/show.html.erb within layouts/application (17.0ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 81ms (Views: 75.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2018-06-27 15:25:35 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (5.3ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.erb:21
+  Rendered collection of comments/_comment.html.erb [3 times] (2.0ms)
+  Rendered articles/show.html.erb within layouts/application (17.8ms)
+  Rendered layouts/layout/_header.html.erb (1.2ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 84ms (Views: 75.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2018-06-27 15:27:36 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (6.2ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.erb:22
+  Rendered collection of comments/_comment.html.erb [3 times] (13.1ms)
+  Rendered articles/show.html.erb within layouts/application (28.8ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 72.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2018-06-27 15:27:49 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (3.8ms)
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.erb:22
+  Rendered collection of comments/_comment.html.erb [3 times] (1.2ms)
+  Rendered articles/show.html.erb within layouts/application (14.5ms)
+  Rendered layouts/layout/_header.html.erb (2.0ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 64ms (Views: 59.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/articles/1/comments" for 127.0.0.1 at 2018-06-27 15:30:21 +0200
+  
+ActionController::RoutingError (No route matches [DELETE] "/articles/1/comments"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-27 15:30:41 +0200
+Processing by Devise::SessionsController#new as HTML
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-27 15:30:41 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.0ms)
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (38.7ms)
+  Rendered layouts/layout/_header.html.erb (0.8ms)
+  Rendered layouts/layout/_header.html.erb (0.7ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 183ms (Views: 180.0ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/layout/_footer.html.erb (27.0ms)
+Completed 200 OK in 235ms (Views: 231.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-06-27 15:30:57 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nluOM9r9m8BAGpAu8ljgFLrSFVzDmdpb+bksgz5x2g9Z2eOaxBNdckdJZvQ5gux0O6X9QNWvx/c1h1QIWh/HoA==", "user"=>{"email"=>"geraldy1st@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "geraldy1st@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (2.4ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", "2018-06-27 13:30:57.820571"], ["updated_at", "2018-06-27 13:30:57.822402"], ["id", 1]]
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 3], ["current_sign_in_at", "2018-06-27 13:30:57.837149"], ["last_sign_in_at", "2018-06-26 08:30:44.768045"], ["updated_at", "2018-06-27 13:30:57.838406"], ["id", 1]]
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 244ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-27 15:30:57 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 6]]
+  ↳ app/views/welcome/index.html.erb:14
+  Rendered welcome/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/layout/_header.html.erb:4
+  Rendered layouts/layout/_header.html.erb (2.8ms)
+  Rendered layouts/layout/_footer.html.erb (0.7ms)
+Completed 200 OK in 68ms (Views: 64.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-06-27 15:31:00 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (8.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/layout/_header.html.erb:4
+  Rendered layouts/layout/_header.html.erb (2.1ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 80ms (Views: 65.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 15:31:03 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (8.1ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.7ms)
+  Rendered articles/show.html.erb within layouts/application (25.0ms)
+  Rendered layouts/layout/_header.html.erb (0.7ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 93ms (Views: 83.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/2/edit" for 127.0.0.1 at 2018-06-27 15:31:08 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:18
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.8ms)
+  Rendered articles/edit.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/layout/_header.html.erb:4
+  Rendered layouts/layout/_header.html.erb (3.1ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 94ms (Views: 75.1ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/articles/2/comments" for 127.0.0.1 at 2018-06-27 15:31:19 +0200
+  
+ActionController::RoutingError (No route matches [DELETE] "/articles/2/comments"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 15:33:36 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (6.7ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.0ms)
+  Rendered articles/show.html.erb within layouts/application (15.9ms)
+  Rendered layouts/layout/_header.html.erb (0.8ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 136ms (Views: 128.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 15:33:53 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (7.7ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (0.8ms)
+  Rendered articles/show.html.erb within layouts/application (18.2ms)
+  Rendered layouts/layout/_header.html.erb (0.8ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 121ms (Views: 115.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 15:34:59 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (4.0ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (0.8ms)
+  Rendered articles/show.html.erb within layouts/application (14.9ms)
+  Rendered layouts/layout/_header.html.erb (0.8ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 114ms (Views: 109.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 15:36:00 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (7.9ms)
+  [1m[36mComment Load (1.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (2.0ms)
+  Rendered articles/show.html.erb within layouts/application (25.7ms)
+  Rendered layouts/layout/_header.html.erb (1.1ms)
+  Rendered layouts/layout/_footer.html.erb (0.5ms)
+Completed 200 OK in 180ms (Views: 171.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 15:36:35 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (8.1ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (26.7ms)
+  Rendered layouts/layout/_header.html.erb (1.8ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 410ms (Views: 404.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 15:55:13 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (23.2ms)
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (2.0ms)
+  Rendered articles/show.html.erb within layouts/application (40.7ms)
+  Rendered layouts/layout/_header.html.erb (2.8ms)
+  Rendered layouts/layout/_footer.html.erb (0.7ms)
+Completed 200 OK in 230ms (Views: 212.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 15:55:30 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (5.7ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (2.4ms)
+  Rendered articles/show.html.erb within layouts/application (16.8ms)
+  Rendered layouts/layout/_header.html.erb (1.1ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 82ms (Views: 73.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 15:56:06 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (5.1ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.2ms)
+  Rendered articles/show.html.erb within layouts/application (12.9ms)
+  Rendered layouts/layout/_header.html.erb (0.7ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 90ms (Views: 77.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 15:58:43 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (4.8ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.1ms)
+  Rendered articles/show.html.erb within layouts/application (15.0ms)
+  Rendered layouts/layout/_header.html.erb (1.0ms)
+  Rendered layouts/layout/_footer.html.erb (0.5ms)
+Completed 200 OK in 66ms (Views: 59.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:00:42 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (3.4ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (14.3ms)
+  Rendered layouts/layout/_header.html.erb (1.1ms)
+  Rendered layouts/layout/_footer.html.erb (0.5ms)
+Completed 200 OK in 128ms (Views: 120.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:00:54 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (4.8ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.1ms)
+  Rendered articles/show.html.erb within layouts/application (13.9ms)
+  Rendered layouts/layout/_header.html.erb (1.0ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 115ms (Views: 109.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:01:09 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (4.4ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.1ms)
+  Rendered articles/show.html.erb within layouts/application (13.5ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.5ms)
+Completed 200 OK in 115ms (Views: 109.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:01:20 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (3.6ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.5ms)
+  Rendered articles/show.html.erb within layouts/application (13.4ms)
+  Rendered layouts/layout/_header.html.erb (0.8ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 111ms (Views: 105.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:02:04 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (4.0ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.7ms)
+  Rendered articles/show.html.erb within layouts/application (13.7ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 94ms (Views: 89.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:02:17 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (5.0ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.5ms)
+  Rendered articles/show.html.erb within layouts/application (15.6ms)
+  Rendered layouts/layout/_header.html.erb (1.2ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 123ms (Views: 116.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:02:53 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (4.8ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.0ms)
+  Rendered articles/show.html.erb within layouts/application (12.7ms)
+  Rendered layouts/layout/_header.html.erb (1.0ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 96ms (Views: 91.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:03:21 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (3.3ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (0.9ms)
+  Rendered articles/show.html.erb within layouts/application (11.5ms)
+  Rendered layouts/layout/_header.html.erb (0.6ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 50.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:03:37 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (4.6ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (0.9ms)
+  Rendered articles/show.html.erb within layouts/application (12.1ms)
+  Rendered layouts/layout/_header.html.erb (1.1ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 117ms (Views: 110.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:04:01 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (5.2ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (0.9ms)
+  Rendered articles/show.html.erb within layouts/application (14.5ms)
+  Rendered layouts/layout/_header.html.erb (0.7ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 51.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:04:25 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (5.3ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.3ms)
+  Rendered articles/show.html.erb within layouts/application (14.7ms)
+  Rendered layouts/layout/_header.html.erb (1.0ms)
+  Rendered layouts/layout/_footer.html.erb (0.5ms)
+Completed 200 OK in 116ms (Views: 109.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:04:34 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (4.6ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.0ms)
+  Rendered articles/show.html.erb within layouts/application (14.1ms)
+  Rendered layouts/layout/_header.html.erb (0.6ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 62ms (Views: 56.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:05:03 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (5.3ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.0ms)
+  Rendered articles/show.html.erb within layouts/application (13.1ms)
+  Rendered layouts/layout/_header.html.erb (1.3ms)
+  Rendered layouts/layout/_footer.html.erb (0.5ms)
+Completed 200 OK in 117ms (Views: 112.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:06:21 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (4.9ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.4ms)
+  Rendered articles/show.html.erb within layouts/application (16.1ms)
+  Rendered layouts/layout/_header.html.erb (0.8ms)
+  Rendered layouts/layout/_footer.html.erb (1.0ms)
+Completed 200 OK in 102ms (Views: 95.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:07:00 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (3.9ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.1ms)
+  Rendered articles/show.html.erb within layouts/application (14.2ms)
+  Rendered layouts/layout/_header.html.erb (0.8ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 112ms (Views: 107.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:07:34 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (4.4ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (0.9ms)
+  Rendered articles/show.html.erb within layouts/application (12.8ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (1.6ms)
+Completed 200 OK in 110ms (Views: 103.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:07:53 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (4.2ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.5ms)
+  Rendered articles/show.html.erb within layouts/application (14.2ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.5ms)
+Completed 200 OK in 99ms (Views: 93.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:08:04 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (6.1ms)
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.3ms)
+  Rendered articles/show.html.erb within layouts/application (15.9ms)
+  Rendered layouts/layout/_header.html.erb (0.8ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 114ms (Views: 109.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:08:20 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (5.0ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.3ms)
+  Rendered articles/show.html.erb within layouts/application (16.0ms)
+  Rendered layouts/layout/_header.html.erb (1.0ms)
+  Rendered layouts/layout/_footer.html.erb (0.5ms)
+Completed 200 OK in 102ms (Views: 95.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:08:43 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (6.7ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.0ms)
+  Rendered articles/show.html.erb within layouts/application (16.1ms)
+  Rendered layouts/layout/_header.html.erb (0.8ms)
+  Rendered layouts/layout/_footer.html.erb (1.6ms)
+Completed 200 OK in 123ms (Views: 115.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:08:57 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (4.9ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.0ms)
+  Rendered articles/show.html.erb within layouts/application (12.9ms)
+  Rendered layouts/layout/_header.html.erb (0.8ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 109ms (Views: 103.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:09:29 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_form.html.erb:13
+  Rendered comments/_form.html.erb (7.4ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [3 times] (1.0ms)
+  Rendered articles/show.html.erb within layouts/application (16.9ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (2.4ms)
+Completed 200 OK in 110ms (Views: 104.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2/edit" for 127.0.0.1 at 2018-06-27 16:09:37 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:18
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.3ms)
+  Rendered articles/edit.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/layout/_header.html.erb:4
+  Rendered layouts/layout/_header.html.erb (2.1ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 78ms (Views: 69.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:11:04 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (2.0ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/comments/_comment.html.erb:11
+  Rendered collection of comments/_comment.html.erb [3 times] (2.1ms)
+  Rendered articles/show.html.erb within layouts/application (10.5ms)
+  Rendered layouts/layout/_header.html.erb (0.6ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 49.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:11:29 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  Rendered comments/_form.html.erb (2.1ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:32
+  Rendered collection of comments/_comment.html.erb [3 times] (1.5ms)
+  Rendered articles/show.html.erb within layouts/application (14.8ms)
+  Rendered layouts/layout/_header.html.erb (0.7ms)
+  Rendered layouts/layout/_footer.html.erb (0.9ms)
+Completed 200 OK in 68ms (Views: 61.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:14:12 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (3.4ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [3 times] (1.3ms)
+  Rendered articles/show.html.erb within layouts/application (14.8ms)
+  Rendered layouts/layout/_header.html.erb (0.8ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 73ms (Views: 66.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:14:34 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (2.6ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (1.4ms)
+  Rendered articles/show.html.erb within layouts/application (15.7ms)
+  Rendered layouts/layout/_header.html.erb (1.0ms)
+  Rendered layouts/layout/_footer.html.erb (1.1ms)
+Completed 200 OK in 68ms (Views: 62.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2/edit" for 127.0.0.1 at 2018-06-27 16:15:51 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:18
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (5.3ms)
+  Rendered articles/edit.html.erb within layouts/application (13.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/layout/_header.html.erb:4
+  Rendered layouts/layout/_header.html.erb (3.2ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 122ms (Views: 112.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:16:18 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (3.3ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (1.4ms)
+  Rendered articles/show.html.erb within layouts/application (14.6ms)
+  Rendered layouts/layout/_header.html.erb (0.6ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 92ms (Views: 87.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:17:33 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (3.4ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (1.3ms)
+  Rendered articles/show.html.erb within layouts/application (16.2ms)
+  Rendered layouts/layout/_header.html.erb (1.1ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 120ms (Views: 115.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:17:54 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (2.3ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (1.3ms)
+  Rendered articles/show.html.erb within layouts/application (12.9ms)
+  Rendered layouts/layout/_header.html.erb (0.7ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 94ms (Views: 88.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:18:04 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (3.0ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (1.4ms)
+  Rendered articles/show.html.erb within layouts/application (13.7ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 126ms (Views: 121.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:18:13 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (3.3ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (1.2ms)
+  Rendered articles/show.html.erb within layouts/application (15.6ms)
+  Rendered layouts/layout/_header.html.erb (0.6ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 94ms (Views: 88.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:18:20 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (3.7ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (2.0ms)
+  Rendered articles/show.html.erb within layouts/application (14.9ms)
+  Rendered layouts/layout/_header.html.erb (0.8ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 116ms (Views: 110.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:18:40 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (2.3ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (1.5ms)
+  Rendered articles/show.html.erb within layouts/application (11.4ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 105ms (Views: 99.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:18:48 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (3.6ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (1.0ms)
+  Rendered articles/show.html.erb within layouts/application (16.0ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 108ms (Views: 103.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:19:03 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (2.2ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (12.4ms)
+  Rendered layouts/layout/_header.html.erb (0.7ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 93ms (Views: 86.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:19:13 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (3.0ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (0.9ms)
+  Rendered articles/show.html.erb within layouts/application (13.0ms)
+  Rendered layouts/layout/_header.html.erb (0.8ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 109ms (Views: 103.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:19:19 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (5.5ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (1.0ms)
+  Rendered articles/show.html.erb within layouts/application (19.1ms)
+  Rendered layouts/layout/_header.html.erb (1.1ms)
+  Rendered layouts/layout/_footer.html.erb (0.5ms)
+Completed 200 OK in 107ms (Views: 97.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:19:32 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (4.6ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (1.3ms)
+  Rendered articles/show.html.erb within layouts/application (17.2ms)
+  Rendered layouts/layout/_header.html.erb (0.8ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 132ms (Views: 124.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:19:55 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (2.2ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (13.2ms)
+  Rendered layouts/layout/_header.html.erb (1.0ms)
+  Rendered layouts/layout/_footer.html.erb (0.5ms)
+Completed 200 OK in 122ms (Views: 117.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:20:19 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (2.2ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (1.5ms)
+  Rendered articles/show.html.erb within layouts/application (15.6ms)
+  Rendered layouts/layout/_header.html.erb (1.0ms)
+  Rendered layouts/layout/_footer.html.erb (0.5ms)
+Completed 200 OK in 133ms (Views: 124.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:20:37 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (2.0ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (1.3ms)
+  Rendered articles/show.html.erb within layouts/application (14.3ms)
+  Rendered layouts/layout/_header.html.erb (0.6ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 98ms (Views: 91.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:20:59 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (2.6ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (1.4ms)
+  Rendered articles/show.html.erb within layouts/application (14.0ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.5ms)
+Completed 200 OK in 110ms (Views: 103.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:21:07 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (3.0ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (0.9ms)
+  Rendered articles/show.html.erb within layouts/application (15.1ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 158ms (Views: 152.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:21:23 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (2.0ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (1.9ms)
+  Rendered articles/show.html.erb within layouts/application (14.4ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.5ms)
+Completed 200 OK in 95ms (Views: 90.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:23:05 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (2.6ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:28
+  Rendered collection of comments/_comment.html.erb [3 times] (1.3ms)
+  Rendered articles/show.html.erb within layouts/application (12.1ms)
+  Rendered layouts/layout/_header.html.erb (0.6ms)
+  Rendered layouts/layout/_footer.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 52.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:30:28 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (2.0ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [3 times] (1.2ms)
+  Rendered articles/show.html.erb within layouts/application (13.4ms)
+  Rendered layouts/layout/_header.html.erb (0.6ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 99ms (Views: 94.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:32:19 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (1.9ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [3 times] (0.9ms)
+  Rendered articles/show.html.erb within layouts/application (12.2ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 92ms (Views: 87.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:32:46 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (2.6ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [3 times] (1.1ms)
+  Rendered articles/show.html.erb within layouts/application (13.4ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 130ms (Views: 125.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:33:26 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (2.0ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [3 times] (1.3ms)
+  Rendered articles/show.html.erb within layouts/application (14.3ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 112ms (Views: 107.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:33:58 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (3.4ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [3 times] (1.8ms)
+  Rendered articles/show.html.erb within layouts/application (14.6ms)
+  Rendered layouts/layout/_header.html.erb (1.1ms)
+  Rendered layouts/layout/_footer.html.erb (0.6ms)
+Completed 200 OK in 99ms (Views: 92.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:34:09 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (2.0ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [3 times] (1.0ms)
+  Rendered articles/show.html.erb within layouts/application (12.8ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 120ms (Views: 113.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:34:20 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (3.3ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [3 times] (1.3ms)
+  Rendered articles/show.html.erb within layouts/application (14.2ms)
+  Rendered layouts/layout/_header.html.erb (1.1ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 118ms (Views: 112.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:35:09 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (2.4ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [3 times] (1.5ms)
+  Rendered articles/show.html.erb within layouts/application (16.7ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 117ms (Views: 110.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:35:24 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (2.2ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [3 times] (1.2ms)
+  Rendered articles/show.html.erb within layouts/application (15.0ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.5ms)
+Completed 200 OK in 109ms (Views: 103.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:35:30 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (2.8ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [3 times] (1.0ms)
+  Rendered articles/show.html.erb within layouts/application (14.2ms)
+  Rendered layouts/layout/_header.html.erb (0.8ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 100ms (Views: 93.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:35:46 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (3.5ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [3 times] (1.4ms)
+  Rendered articles/show.html.erb within layouts/application (15.0ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 67ms (Views: 61.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:36:08 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (3.0ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [3 times] (2.3ms)
+  Rendered articles/show.html.erb within layouts/application (14.9ms)
+  Rendered layouts/layout/_header.html.erb (0.7ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 62ms (Views: 53.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2018-06-27 16:36:41 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (3.9ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [3 times] (1.4ms)
+  Rendered articles/show.html.erb within layouts/application (21.1ms)
+  Rendered layouts/layout/_header.html.erb (0.6ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 63ms (Views: 57.6ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-06-27 16:37:14 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DB1tqFAq0TNekXHsQtA0ptgnwyPglJfQFSyOIwVWbXBwTWl0OQkgXqPEbZHur0Y4gMnCN2WFhxbHi5WJIZk+6w=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", nil], ["updated_at", "2018-06-27 14:37:14.930951"], ["id", 1]]
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-27 16:37:14 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 6]]
+  ↳ app/views/welcome/index.html.erb:14
+  Rendered welcome/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 50ms (Views: 40.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-06-27 16:37:17 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/layout/_header.html.erb (1.8ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 66ms (Views: 57.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2018-06-27 16:37:21 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (4.4ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 8]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [1 times] (0.6ms)
+  Rendered articles/show.html.erb within layouts/application (17.6ms)
+  Rendered layouts/layout/_header.html.erb (0.6ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 66ms (Views: 59.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles/8/comments" for 127.0.0.1 at 2018-06-27 16:37:42 +0200
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OZDndRhqCl5mhg4og6kBplNPsZ506qOX2kEDf6t+PpFFxfumFkadB6dluXMzNpIUZ24v91igrud5GTbok/C4yA==", "comment"=>{"commenter"=>"", "body"=>""}, "commit"=>"Create Comment", "article_id"=>"8"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[36mComment Create (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", ""], ["body", ""], ["article_id", 8], ["created_at", "2018-06-27 14:37:42.440704"], ["updated_at", "2018-06-27 14:37:42.440704"]]
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:7
+Redirected to http://localhost:3000/articles/8
+Completed 302 Found in 12ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2018-06-27 16:37:42 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (4.3ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 8]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [2 times] (1.2ms)
+  Rendered articles/show.html.erb within layouts/application (13.7ms)
+  Rendered layouts/layout/_header.html.erb (0.6ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 53.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles/8/comments" for 127.0.0.1 at 2018-06-27 16:38:01 +0200
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zjZtWSN9YIFVQiIU9mWifu281bC449GO35jMSvFbGG8b202bFps0cF4x95gLiJSp53dSfHRc3kEWbheqtNocQA==", "comment"=>{"commenter"=>"test", "body"=>"du text histoire de faire bgenre"}, "commit"=>"Create Comment", "article_id"=>"8"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", "test"], ["body", "du text histoire de faire bgenre"], ["article_id", 8], ["created_at", "2018-06-27 14:38:01.413924"], ["updated_at", "2018-06-27 14:38:01.413924"]]
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:7
+Redirected to http://localhost:3000/articles/8
+Completed 302 Found in 8ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2018-06-27 16:38:01 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (3.8ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 8]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [3 times] (1.1ms)
+  Rendered articles/show.html.erb within layouts/application (19.4ms)
+  Rendered layouts/layout/_header.html.erb (1.1ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 86ms (Views: 77.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-27 16:39:03 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 6]]
+  ↳ app/views/welcome/index.html.erb:14
+  Rendered welcome/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/layout/_header.html.erb (1.5ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 55.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-06-27 16:39:19 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.9ms)
+  Rendered articles/new.html.erb within layouts/application (10.0ms)
+  Rendered layouts/layout/_header.html.erb (0.6ms)
+  Rendered layouts/layout/_footer.html.erb (0.5ms)
+Completed 200 OK in 65ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-27 16:39:24 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 6]]
+  ↳ app/views/welcome/index.html.erb:14
+  Rendered welcome/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/layout/_header.html.erb (1.3ms)
+  Rendered layouts/layout/_footer.html.erb (0.7ms)
+Completed 200 OK in 71ms (Views: 62.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-06-27 16:39:25 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/layout/_header.html.erb (0.7ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 68ms (Views: 61.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-27 16:39:42 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 6]]
+  ↳ app/views/welcome/index.html.erb:14
+  Rendered welcome/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/layout/_header.html.erb (0.7ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 73ms (Views: 67.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-27 16:39:43 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.7ms)
+  Rendered layouts/layout/_header.html.erb (0.7ms)
+  Rendered layouts/layout/_footer.html.erb (0.7ms)
+Completed 200 OK in 65ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-06-27 16:39:55 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y3X9gwOtvY27DkUzx3JiYK+ulPUjYzJyeAvtEB4F0aZHBalbHlWWd0ywLOXtzvnYpHZ38GK/KNQZiZc99W4cOg==", "user"=>{"email"=>"geraldy1st@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "geraldy1st@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-06-27 14:39:55.551507"], ["last_sign_in_at", "2018-06-27 13:30:57.837149"], ["sign_in_count", 4], ["updated_at", "2018-06-27 14:39:55.552181"], ["id", 1]]
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 142ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-27 16:39:55 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 6]]
+  ↳ app/views/welcome/index.html.erb:14
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/layout/_header.html.erb:4
+  Rendered layouts/layout/_header.html.erb (2.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 64ms (Views: 59.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-06-27 16:40:00 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  Rendered articles/index.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/layout/_header.html.erb:4
+  Rendered layouts/layout/_header.html.erb (2.1ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 69ms (Views: 62.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2018-06-27 16:40:02 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (4.0ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [3 times] (1.7ms)
+  Rendered articles/show.html.erb within layouts/application (20.6ms)
+  Rendered layouts/layout/_header.html.erb (0.6ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 72ms (Views: 62.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2018-06-27 16:40:41 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (5.3ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [3 times] (1.2ms)
+  Rendered articles/show.html.erb within layouts/application (18.9ms)
+  Rendered layouts/layout/_header.html.erb (1.2ms)
+  Rendered layouts/layout/_footer.html.erb (4.1ms)
+Completed 200 OK in 133ms (Views: 127.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2018-06-27 16:41:57 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:5
+  Rendered comments/_form.html.erb (2.0ms)
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.erb:27
+  Rendered collection of comments/_comment.html.erb [3 times] (1.5ms)
+  Rendered articles/show.html.erb within layouts/application (14.0ms)
+  Rendered layouts/layout/_header.html.erb (0.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.4ms)
+Completed 200 OK in 119ms (Views: 114.1ms | ActiveRecord: 1.3ms)
+
+

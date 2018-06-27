@@ -1,14 +1,18 @@
-<p>
-  <strong>Commenter</strong>
-  <%= comment.commenter %>
-</p>
-<p>
-  <strong>Comment</strong>
-  <%= comment.body %>
-</p>
+<div class="article-comments">
+  <p class="article-comments-name">
+    <strong>Posted by:</strong>
+    <%= comment.commenter %>
+  </p>
+  <p class="article-comments-p">
+    <%= comment.body %>
+  </p>
 
-<p>
-  <%= link_to 'Delete', [comment.article, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
+  <% if user_signed_in? %>
+  <p>
+
+    <%= link_to 'Delete', [comment.article, comment],
+                 method: :delete,
+                 data: { confirm: 'Are you sure?' } %>
+  </p>
+  <% end %>
+</div>

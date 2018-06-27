@@ -1,7 +1,11 @@
 <div class="content-top">
-  <img src="https://thumb.canalplus.pro/http/unsafe/992x/smart/creativemedia-image.canalplus.pro/content/0001/05/8620dcd7c98260c452f34a9052dafc0a8585344a.jpeg" alt="">
+  <img src="https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
   <h3><%= @article.title %></h3>
   <p class="date"><%= @article.created_at %></p>
+  <% if user_signed_in? %>
+  <p><%= link_to 'Edit', edit_article_path(@article) %></p>
+  <% end %>
+  <br>
   <p><%= @article.text %></p>
 </div>
 
@@ -9,14 +13,17 @@
   <div class="banner-mid">
     <h2>What do you think?</h2>
   </div>
-  img or random animation...
 </div>
+<p>partie interactive genre</p>
+<p><em>Share, like, vie</em>(mettre des icons )</p>
 
 <div class="content-low">
-  <h2>Express yourself</h2>
   <div class="wrapper">
-  <%= render 'comments/form' %>
+    <%= render 'comments/form' %>
   </div>
-  <h2>Comments</h2>
-  <%= render @article.comments %>
+
+  <div class="wrapper">
+    <h2>Comments</h2>
+    <%= render @article.comments %>
+  </div>
 </div>
