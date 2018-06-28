@@ -1,7 +1,10 @@
+
 <div class="welcome">
   <ul>
     <li><%= link_to 'Listing articles', controller: 'articles' %></li>
+    <% if user_signed_in? %>
     <li><%= link_to 'New article', new_article_path %></li>
+    <% end %>
   </ul>
 </div>
 <!-- https://blog-pierre-menes.canal.fr/articles/football/des-favoris-au-ralenti -->

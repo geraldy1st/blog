@@ -2,8 +2,12 @@
   <img src="https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
   <h3><%= @article.title %></h3>
   <p class="date"><%= @article.created_at %></p>
-  <% if user_signed_in? %>
+  <% if user_signed_in? && current_user.id == @article.author_id %>
   <p><%= link_to 'Edit', edit_article_path(@article) %></p>
+  <p><%= link_to 'Delete', article_path(@article),
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %></p>
+  <p></p>
   <% end %>
   <br>
   <p><%= @article.text %></p>
@@ -18,9 +22,11 @@
 <p><em>Share, like, vie</em>(mettre des icons )</p>
 
 <div class="content-low">
+  <% if user_signed_in? %>
   <div class="wrapper">
     <%= render 'comments/form' %>
   </div>
+  <% end %>
 
   <div class="wrapper">
     <h2>Comments</h2>
