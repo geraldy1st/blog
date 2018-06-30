@@ -2,7 +2,7 @@
   <span class="logo"><%= link_to 'My Blog!', root_path %></span>
   <ul>
     <% if user_signed_in? %>
-    <li><%= current_user.email %></li>
+    <li><%= "Connected as: #{current_user.email}" %></li>
     <li><%= link_to "Edit Account", edit_user_registration_path %></li>
     <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
     <% else %>

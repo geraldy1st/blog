@@ -89,3 +89,25 @@
     }
   }
 }
+// page new article
+.content-full-screen{
+  height: 90vh;
+  .article-new{
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    h1{
+      background-color: rgba(10, 189, 227,.5);
+      color: #FFF;
+      text-align: left;
+      padding-left: 10px;
+    }
+    .article-new-content{
+      flex: 1;
+      background: #3F5;
+      width: 90vh;
+      margin: auto;
+    }
+  }
+}
