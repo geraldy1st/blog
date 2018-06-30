@@ -3,6 +3,8 @@
   <ul>
     <li><%= link_to 'Listing articles', controller: 'articles' %></li>
     <% if user_signed_in? %>
+      <li><%= "Connected as: #{current_user.email}" %></li>
+      <li><%= link_to "Edit Account", edit_user_registration_path %></li>
     <li><%= link_to 'New article', new_article_path %></li>
     <% end %>
   </ul>

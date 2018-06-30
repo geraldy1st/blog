@@ -28,6 +28,16 @@ nav{
   }
   li{
     display: inline;
+    a{
+      opacity: 1;
+    }
+    a:hover{
+      opacity: .6;
+    }
+    img{
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 
@@ -118,7 +128,62 @@ nav{
         color: #FFF;
         font-family: 'Galada';
         border: none;
+        cursor: pointer;
+      }
+      p{
+        background-color: #F45;
+        color: #FFF;
+        font-family: serif;
+        border: none;
+        width: 90%;
+        margin: 5px auto;
+        padding: 2px 0;
+      }
+      p:hover{
+        text-decoration: line-through #222;
+        cursor: none;
       }
     }
   }
+}.device-main{
+  .devise-main-edit{
+    padding-top: 200px;
+    background: rgba(222, 222, 222,1);
+    position: absolute;
+    width: 80%;
+    top:5%;
+    left: -75%;
+    bottom: 5%;
+    box-shadow: 0 0 27px 2px #AAA;
+    opacity: .94;
+    transition: .2s ease;
+    a{
+      border: none;
+      width: auto;
+      font-size: 20px;
+      padding:5px 25px;
+      background-color: rgba(10, 189, 227,1);
+      color: #FFF;
+      text-align: center;
+    }
+    form{
+      box-shadow: 0 0 0px 0px #111;
+      margin: auto;
+      input{
+        border: none;
+        width: auto;
+        font-size: 20px;
+        padding:5px 25px;
+        background-color: #F45;
+        text-align: center;
+      }
+      input:hover{
+        text-decoration:line-through;
+      }
+    }
+  }
+}
+.devise-main-edit:hover{
+  left: 0;
+  transition: .2s ease;
 }
