@@ -1,11 +1,13 @@
 
 <div class="welcome">
   <ul>
-    <li><%= link_to 'Listing articles', controller: 'articles' %></li>
     <% if user_signed_in? %>
       <li><%= "Connected as: #{current_user.email}" %></li>
-      <li><%= link_to "Edit Account", edit_user_registration_path %></li>
-    <li><%= link_to 'New article', new_article_path %></li>
+      <li><%= link_to "Edit", edit_user_registration_path %></li>
+      <li><%= link_to 'New', new_article_path %></li>
+      <li><%= link_to 'Posts', controller: 'articles' %></li>
+      <% else %>
+      <li><%= link_to 'Posts', controller: 'articles' %></li>
     <% end %>
   </ul>
 </div>
@@ -18,7 +20,7 @@
 
 <% @articles.each do |article| %>
 <div class="post">
-  <img src="https://images.pexels.com/photos/247929/pexels-photo-247929.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+  <%= image_tag ('https://images.pexels.com/photos/247929/pexels-photo-247929.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'), class: 'home-img' %>
   <h3 class="text-bold"><%= article.title %></h3>
   <p><%= article.text %></p>
 </div>
