@@ -42,15 +42,15 @@
     <p class="cancel-account">⬅️⬅️⬅️Cancel my account</p>
   </div>
 <% end %>
-<div class="devise-main-edit">
-  <h3>Cancel my account</h3>
-  <p>attention zone de danger!</p>
-  <p>戻れない</p>
-  <p>there is no turn back from there!</p>
-  <p>Einen schönen Tag noch</p>
-  <p>hasta luego</p>
-  <p>Unhappy?💔</p>
-  <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
-  <%= link_to "Back", :back %>
-</div>
+  <div class="devise-main-edit">
+    <h3>Cancel my account</h3>
+    <p>attention zone de danger!</p>
+    <p>戻れない</p>
+    <p>there is no turn back from there!</p>
+    <p>Einen schönen Tag noch</p>
+    <p>hasta luego</p>
+    <p>Unhappy?💔</p>
+    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+    <%= link_to "Back", edit_user_registration_path %>
+  </div>
 </div>

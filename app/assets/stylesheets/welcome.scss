@@ -150,10 +150,10 @@ nav{
     padding-top: 200px;
     background: rgba(222, 222, 222,1);
     position: absolute;
-    width: 80%;
     top:5%;
-    left: -75%;
-    bottom: 5%;
+    left: 0%;
+    bottom: 0%;
+    right: 0;
     box-shadow: 0 0 27px 2px #AAA;
     opacity: .94;
     transition: .2s ease;
@@ -182,8 +182,4 @@ nav{
       }
     }
   }
-}
-.devise-main-edit:hover{
-  left: 0;
-  transition: .2s ease;
 }
