@@ -2,6 +2,8 @@
 <div class="welcome">
   <ul>
     <% if user_signed_in? %>
+      <li class="profil-welcome" ><%= image_tag ('https://www.quizz.biz/uploads/quizz/1190261/7_Nu725.jpg'), class: 'profil-img' %>
+      <%= "Connected as: #{current_user.email}" %></li>
       <li><%= "Connected as: #{current_user.email}" %></li>
       <li><%= link_to "Edit", edit_user_registration_path %></li>
       <li><%= link_to 'New', new_article_path %></li>
