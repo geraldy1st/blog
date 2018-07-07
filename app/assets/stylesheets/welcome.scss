@@ -52,17 +52,18 @@ nav{
     display: flex;
     padding: 20px 0;
     .profil-welcome{
-      border-radius: 35px;
       padding: 0;
+      margin-left:10px;
       width: 60px;
       height: 60px;
-      overflow: hidden;
       display: flex;
       .profil-img{
         margin: auto;
         justify-content: center;
-        width: 100%;
+        width:100%;
+        border-radius: 5px;
       }
+
     }
     li{
       padding: 5px 10px;
