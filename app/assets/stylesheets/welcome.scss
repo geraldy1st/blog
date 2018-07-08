@@ -96,13 +96,15 @@ nav{
     }
   }
   .post{
-    background-color: rgba(150, 160, 250, .1);
+    background-color: #FFF;
     display: flex;
     flex-direction: column;
-    width: 90%;
-    margin: 10px auto 30px auto;
+    width: 100%;
+    padding: 10px 0;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px 1px #999;
     .home-img{
-      width: 100%;
+      width: 90%;
       margin:auto;
     }
     h3{
@@ -111,10 +113,14 @@ nav{
       font-weight: bold;
       font-size: 1.5em;
       padding-left: 10px;
+      width: 90%;
+      margin: 0 auto;
     }
     p{
       // background-color: rgba(150, 160, 250, .1);
       padding: 10px;
+      width: 90%;
+      margin: 0 auto;
       max-height: 43px;
       overflow: hidden;
     }
@@ -144,12 +150,12 @@ nav{
     input{
       width: 90%;
       height: 2em;
+      border: 1px solid rgba(10, 189, 227,.5);;
     }
     .actions{
       input{
         background-color: rgba(10, 189, 227,1);
         color: #FFF;
-        font-family: 'Galada';
         border: none;
         cursor: pointer;
       }
