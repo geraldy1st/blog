@@ -3,7 +3,6 @@
   <ul>
     <% if user_signed_in? %>
       <li class="profil-welcome" ><%= image_tag ('https://www.quizz.biz/uploads/quizz/1190261/7_Nu725.jpg'), class: 'profil-img' %></li>
-      <li><%= "Connected as: #{current_user.email}" %></li>
       <li><%= link_to "Edit", edit_user_registration_path %></li>
       <li><%= link_to 'New', new_article_path %></li>
       <li><%= link_to 'Posts', controller: 'articles' %></li>
@@ -17,8 +16,11 @@
 <!-- https://blog-pierre-menes.canal.fr/articles/football/des-favoris-au-ralenti -->
 <div class="main-post">
   <div class="post-header">
+    <% if user_signed_in? %>
+      <p class="profil-username"><%= "Connected as: #{current_user.email}" %></p>
     <h1>Bio:</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <% end %>
   </div>
 
 <% @articles.each do |article| %>
