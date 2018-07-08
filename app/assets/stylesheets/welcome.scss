@@ -80,9 +80,12 @@ nav{
 .main-post{
   width: 100%;
   .post-header{
-    width: 60%;
-    margin: 20px auto;
+    max-width: 100%;
+    margin: 0px auto;
+    padding: 10px;
     color: rgba(10, 189, 227,1);
+    box-shadow: 0 3px 5px 1px #999;
+    background-color: #FFF;
     p{
       color: #888;
     }
@@ -107,6 +110,8 @@ nav{
     p{
       // background-color: rgba(150, 160, 250, .1);
       padding: 10px;
+      max-height: 43px;
+      overflow: hidden;
     }
   }
 }
@@ -154,7 +159,7 @@ nav{
       }
       p:hover{
         text-decoration: line-through #222;
-        cursor: none;
+        cursor:pointer;
       }
     }
   }
