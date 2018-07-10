@@ -1,0 +1,454 @@
+/* line 4, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.content-top {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+}
+/* line 9, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.content-top img {
+  width: 100%;
+  margin: 20px auto;
+}
+/* line 13, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.content-top h3 {
+  color: #0abde3;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+/* line 18, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.content-top .date {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+/* line 24, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.content-mid {
+  overflow: hidden;
+  margin: 40px auto;
+}
+/* line 27, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.content-mid .banner-mid {
+  background-color: #0abde3;
+  background-image: linear-gradient(225deg, #0abde3 0%, #2AF598 100%);
+  padding: 4em;
+  margin: 40px 0 40px -10px;
+  width: 100%;
+  color: #FFF;
+  transform: rotate(-4deg);
+}
+/* line 35, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.content-mid .banner-mid h2 {
+  text-transform: uppercase;
+  text-align: left;
+  font-family: 'Hind', cursive;
+  font-size: 2em;
+}
+
+/* line 44, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.wrapper-inner {
+  box-shadow: 0 0 18px 3px #DDD;
+  padding: 10px;
+  margin-bottom: 2em;
+}
+/* line 48, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.wrapper-inner input {
+  min-width: 90%;
+  height: 2em;
+}
+/* line 52, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.wrapper-inner textarea {
+  width: 90%;
+  min-height: 100px;
+  margin: 10px auto;
+  border: solid 1px #DDD;
+}
+/* line 59, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.wrapper-inner .button input {
+  background-color: #0abde3;
+  color: #FFF;
+  font-size: 1em;
+  border-radius: 4px;
+  min-width: auto;
+  padding: 4px 10px;
+  margin-bottom: 20px;
+}
+/* line 68, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.wrapper-inner .button input:hover {
+  background-color: rgba(10, 189, 227, 0.7);
+}
+
+/* line 73, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.content-low {
+  padding-top: 2em 0;
+  min-height: 50vh;
+}
+/* line 76, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.content-low .wrapper {
+  width: 90%;
+}
+/* line 78, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.content-low .wrapper .article-comments {
+  padding: 2em 0;
+}
+/* line 80, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.content-low .wrapper .article-comments .article-comments-name {
+  font-weight: bold;
+  text-align: left;
+}
+/* line 84, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.content-low .wrapper .article-comments .article-comments-p {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #EEE;
+}
+
+/* line 93, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.content-full-screen {
+  height: 89vh;
+}
+/* line 95, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.content-full-screen .article-new {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+/* line 99, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.content-full-screen .article-new h1 {
+  background-color: rgba(10, 189, 227, 0.5);
+  color: #FFF;
+  text-align: left;
+  padding-left: 10px;
+}
+/* line 105, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.content-full-screen .article-new .article-new-content {
+  flex: 1;
+  width: 100%;
+  margin: 0 auto;
+}
+/* line 109, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/articles.scss */
+.content-full-screen .article-new .article-new-content textarea {
+  width: 80%;
+  border: 1px solid #DDD;
+}
+/* line 5, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/comments.scss */
+.user-comment {
+  display: flex;
+  height: 70px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+/* line 12, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/comments.scss */
+.user-comment .profil-img {
+  width: 60px;
+  margin: 0 10px 0 5%;
+}
+/* line 17, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/comments.scss */
+.user-comment p {
+  margin: 0;
+}
+/* line 4, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+nav {
+  display: flex;
+  margin: auto;
+  background-color: rgba(10, 189, 227, 0.9);
+  color: #EEE;
+  text-align: left;
+  height: 5vh;
+}
+/* line 11, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+nav .logo {
+  flex: 1;
+  margin: auto;
+  padding-left: 10px;
+}
+/* line 15, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+nav .logo a {
+  color: #EEE;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 1px solid #FFF;
+  padding: 0 10px;
+}
+/* line 23, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+nav ul {
+  flex: 1;
+  margin: auto;
+  text-align: right;
+  padding-right: 10px;
+}
+/* line 29, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+nav li {
+  display: inline;
+}
+/* line 31, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+nav li a {
+  opacity: 1;
+}
+/* line 34, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+nav li a:hover {
+  opacity: .6;
+}
+/* line 37, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+nav li img {
+  width: 20px;
+  height: 20px;
+}
+
+/* line 49, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.welcome ul {
+  background-color: rgba(10, 189, 227, 0.5);
+  width: 100%;
+  display: flex;
+  padding: 20px 0;
+}
+/* line 54, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.welcome ul .profil-welcome {
+  padding: 0;
+  margin-left: 10px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+}
+/* line 61, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.welcome ul li {
+  padding: 5px 10px;
+  margin: auto;
+  text-align: center;
+}
+/* line 66, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.welcome ul a {
+  color: #FFF;
+  background-color: #0abde3;
+  padding: 5px 10px;
+}
+
+/* line 73, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.profil-img {
+  margin: auto;
+  justify-content: center;
+  width: 60px;
+  border-radius: 5px;
+}
+
+/* line 79, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.main-post {
+  width: 100%;
+}
+/* line 81, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.main-post .post-header {
+  max-width: 100%;
+  margin: 0px auto;
+  padding: 10px;
+  color: #0abde3;
+  box-shadow: 0 3px 5px 1px #999;
+  background-color: #FFF;
+}
+/* line 88, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.main-post .post-header p {
+  color: #888;
+}
+/* line 91, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.main-post .post-header .profil-username {
+  font-size: .8em;
+  padding: .5em;
+}
+/* line 96, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.main-post .post {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px auto;
+  box-shadow: 0 2px 5px 1px #999;
+}
+/* line 104, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.main-post .post .home-img {
+  width: 90%;
+  height: 80%;
+  margin: auto;
+}
+/* line 109, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.main-post .post .post-title {
+  height: 20%;
+}
+/* line 111, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.main-post .post .post-title .post-shadow {
+  height: .1px;
+  width: 100%;
+  box-shadow: 0 -2px 10px 17px #FFF;
+  position: absolute;
+}
+/* line 118, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.main-post .post h3 {
+  font-family: 'Galada', cursive;
+  color: #0abde3;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-left: 10px;
+  width: 90%;
+  margin: 0 auto;
+}
+/* line 127, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.main-post .post p {
+  padding: 10px;
+  width: 90%;
+  margin: 0 auto;
+  max-height: 42px;
+  overflow: hidden;
+}
+
+/* device */
+/* line 138, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.device-main {
+  height: 90vh;
+  text-align: center;
+}
+/* line 141, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.device-main h2 {
+  font-family: 'Galada', cursive;
+  padding-top: 80px;
+}
+/* line 145, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.device-main a {
+  font-size: 1em;
+  color: #999;
+}
+/* line 149, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.device-main a:hover {
+  color: #000;
+}
+/* line 152, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.device-main form {
+  box-shadow: 0 0 27px 2px #AAA;
+  margin: 30px auto;
+  text-align: center;
+  width: 60%;
+  padding: 2em;
+}
+/* line 158, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.device-main form input {
+  width: 90%;
+  height: 2em;
+  border: 1px solid rgba(10, 189, 227, 0.5);
+}
+/* line 164, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.device-main form .actions input {
+  background-color: #0abde3;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+}
+/* line 170, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.device-main form .actions p {
+  background-color: #F45;
+  color: #FFF;
+  font-family: serif;
+  border: none;
+  width: 90%;
+  margin: 5px auto;
+  padding: 2px 0;
+}
+/* line 179, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.device-main form .actions p:hover {
+  text-decoration: line-through #222;
+  cursor: pointer;
+}
+
+/* line 186, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.device-main .devise-main-edit {
+  padding-top: 200px;
+  background: #dedede;
+  position: absolute;
+  top: 5%;
+  left: 0%;
+  bottom: 0%;
+  right: 0;
+  box-shadow: 0 0 27px 2px #AAA;
+  opacity: .94;
+  transition: .2s ease;
+}
+/* line 197, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.device-main .devise-main-edit a {
+  border: none;
+  width: auto;
+  font-size: 20px;
+  padding: 5px 25px;
+  background-color: #0abde3;
+  color: #FFF;
+  text-align: center;
+}
+/* line 206, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.device-main .devise-main-edit form {
+  box-shadow: 0 0 0px 0px #111;
+  margin: auto;
+}
+/* line 209, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.device-main .devise-main-edit form input {
+  border: none;
+  width: auto;
+  font-size: 20px;
+  padding: 5px 25px;
+  background-color: #F45;
+  text-align: center;
+}
+/* line 217, /Users/geraldy/Documents/dev/THP/prac/app/blog/app/assets/stylesheets/welcome.scss */
+.device-main .devise-main-edit form input:hover {
+  text-decoration: line-through;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+ /* font */
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Galada');
+@import url('https://fonts.googleapis.com/css?family=Hind');
+/* colors */
+
+
+*,html,body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+body{
+  background-color: #EEE;
+}
+nav{
+  min-height: 50px;
+}
+h1{
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.wrapper{
+  margin: 0 auto;
+  text-align: center;
+}
+footer{
+  background-color: rgba(10, 189, 227,1.0);
+  padding: 10px;
+  text-align: center;
+}
