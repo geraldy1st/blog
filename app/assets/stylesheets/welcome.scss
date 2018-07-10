@@ -105,6 +105,7 @@ nav{
       width: 90%;
       height: 80%;
       margin:auto;
+      transition: .2s ease-in;
     }
     .post-title{
       height: 20%;
@@ -133,6 +134,11 @@ nav{
       overflow: hidden;
     }
   }
+}
+.home-img:hover{
+  transform: scale(.999);
+  transition: .2s ease-in;
+  filter: brightness(70%);
 }
 /* device */
 .device-main{
