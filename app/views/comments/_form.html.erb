@@ -1,15 +1,15 @@
 <div class="wrapper-inner">
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
+
+<div class="user-comment">
+  <%= image_tag ('https://www.quizz.biz/uploads/quizz/1190261/7_Nu725.jpg'), class: 'profil-img' %>
+  <p><%= current_user.nickname %></p>
+</div>
   <p>
-    <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
-  </p>
-  <p>
-    <%= form.label :body %><br>
     <%= form.text_area :body %>
   </p>
 
     <span class="button"><%= form.submit %></span>
-  
+
 <% end %>
 </div>

@@ -17,14 +17,14 @@
 <div class="main-post">
   <div class="post-header">
     <% if user_signed_in? %>
-      <p class="profil-username"><%= "Connected as: #{current_user.email}" %></p>
+      <p class="profil-username"><%= "Connected as: #{current_user.nickname}" %></p>
     <h1>Bio:</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     <% end %>
   </div>
 
 <% @articles.each do |article| %>
-<div class="post">
+<a href="articles/<%= article.id %>"><div class="post">
   <%= image_tag ('https://images.pexels.com/photos/247929/pexels-photo-247929.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'), class: 'home-img' %>
   <div class="post-title">
     <h3 class="text-bold"><%= article.title %></h3>
@@ -32,5 +32,6 @@
     <div class="post-shadow"></div>
   </div>
 </div>
+</a>
 <% end %>
 </div>
