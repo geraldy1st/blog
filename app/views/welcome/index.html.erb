@@ -1,26 +1,17 @@
 
 <div class="welcome">
   <ul>
-    <% if user_signed_in? %>
-      <li class="profil-welcome" ><%= image_tag ('https://www.quizz.biz/uploads/quizz/1190261/7_Nu725.jpg'), class: 'profil-img' %></li>
-      <li><%= link_to "Edit", edit_user_registration_path %></li>
-      <li><%= link_to 'New', new_article_path %></li>
-      <li><%= link_to 'Posts', controller: 'articles' %></li>
-      <% else %>
+
       <li class="profil-welcome" ><%= image_tag ('http://noticias.perfil.com/wp-content/uploads/2018/03/006-casa-de-papel-4-624x429.jpg'), class: 'profil-img' %></li>
       <li><em>what can u not do when not login?</em> ¯\_(ツ)_/¯</li>
       <li><%= link_to 'Posts', controller: 'articles' %></li>
-    <% end %>
+
   </ul>
 </div>
 <!-- https://blog-pierre-menes.canal.fr/articles/football/des-favoris-au-ralenti -->
 <div class="main-post">
   <div class="post-header">
-    <% if user_signed_in? %>
-      <p class="profil-username"><%= "Connected as: #{current_user.nickname}" %></p>
-    <h1>Bio:</h1>
-    <p>Dans la vie je suis développeur web. Passionné de nouvelles technologies, startup fan et social addict. Vous pouvez me retrouver sur Twitter, Instagram ou encore LinkedIn. </p>
-    <% end %>
+  
   </div>
 
 <% @articles.each do |article| %>
