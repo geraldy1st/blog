@@ -36057,3 +36057,45 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 76ms (Views: 68.3ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/articles/20" for 127.0.0.1 at 2018-07-11 20:29:38 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 20], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:6
+  Rendered comments/_form.html.erb (2.1ms)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 20]]
+  ↳ app/views/articles/show.html.erb:33
+  Rendered collection of comments/_comment.html.erb [1 times] (0.7ms)
+  Rendered articles/show.html.erb within layouts/application (19.8ms)
+  Rendered layouts/layout/_header.html.erb (2.4ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 112ms (Views: 98.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0f68e39161d79680e9e743a747928cd5579aa272/06_JAMES.jpg" for 127.0.0.1 at 2018-07-11 20:29:38 +0200
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0f68e39161d79680e9e743a747928cd5579aa272", "filename"=>"06_JAMES"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: GHdFkh71ZzNJ8U1GVYQgfCWF (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFIU0dSR2EyZzNNVnA2VGtvNFZURkhWbGxSWjJaRFYwWUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMTFUMTg6MzQ6MzguODIwWiIsInB1ciI6ImJsb2Jfa2V5In19--7e2ca7587ecd7d90b51e57c68edb7370c446c6b5/06_JAMES.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2206_JAMES.jpg%22%3B+filename%2A%3DUTF-8%27%2706_JAMES.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFIU0dSR2EyZzNNVnA2VGtvNFZURkhWbGxSWjJaRFYwWUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMTFUMTg6MzQ6MzguODIwWiIsInB1ciI6ImJsb2Jfa2V5In19--7e2ca7587ecd7d90b51e57c68edb7370c446c6b5/06_JAMES.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2206_JAMES.jpg%22%3B+filename%2A%3DUTF-8%27%2706_JAMES.jpg
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFIU0dSR2EyZzNNVnA2VGtvNFZURkhWbGxSWjJaRFYwWUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMTFUMTg6MzQ6MzguODIwWiIsInB1ciI6ImJsb2Jfa2V5In19--7e2ca7587ecd7d90b51e57c68edb7370c446c6b5/06_JAMES.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2206_JAMES.jpg%22%3B+filename%2A%3DUTF-8%27%2706_JAMES.jpg" for 127.0.0.1 at 2018-07-11 20:29:38 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"06_JAMES.jpg\"; filename*=UTF-8''06_JAMES.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFIU0dSR2EyZzNNVnA2VGtvNFZURkhWbGxSWjJaRFYwWUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMTFUMTg6MzQ6MzguODIwWiIsInB1ciI6ImJsb2Jfa2V5In19--7e2ca7587ecd7d90b51e57c68edb7370c446c6b5", "filename"=>"06_JAMES"}
+[36m  Disk Storage (0.5ms) [0m[34mDownloaded file from key: GHdFkh71ZzNJ8U1GVYQgfCWF[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
