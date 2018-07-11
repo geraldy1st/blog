@@ -1,16 +1,18 @@
 <div class="content-top">
-  <img src="https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+  <!--<img src="https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">-->
+	<%= image_tag(@article.image) %>
   <h3><%= @article.title %></h3>
   <p class="date"><%= @article.created_at %></p>
   <% if user_signed_in? && current_user.id == @article.author_id %>
-  <p><%= link_to 'Edit', edit_article_path(@article) %></p>
-  <p><%= link_to 'Delete', article_path(@article),
-          method: :delete,
-          data: { confirm: 'Are you sure?' } %></p>
-  <p></p>
+  <div class="btn-article">
+    <%= link_to 'Edit', edit_article_path(@article) %>
+    <%= link_to 'Delete', article_path(@article),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %>
+  </div>
   <% end %>
   <br>
-  <p><%= @article.text %></p>
+  <p class="article-done"><%= @article.text %></p>
 </div>
 
 <div class="content-mid">
