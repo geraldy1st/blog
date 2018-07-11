@@ -136,9 +136,8 @@ nav{
   }
 }
 .home-img:hover{
-  transform: scale(.999);
   transition: .2s ease-in;
-  filter: brightness(70%);
+  filter: brightness(70%) blur(1px);
 }
 /* device */
 .device-main{
