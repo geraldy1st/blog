@@ -36099,3 +36099,182 @@ Sent data  (0.7ms)
 Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-07-11 20:44:17 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/welcome/index.html.erb:4
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 9]]
+  ↳ app/views/welcome/index.html.erb:26
+  Rendered welcome/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/layout/_header.html.erb (2.9ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 117ms (Views: 101.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-07-11 20:44:18 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.2ms)
+  Rendered articles/new.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/layout/_header.html.erb:4
+  Rendered layouts/layout/_header.html.erb (2.6ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 70ms (Views: 59.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-07-11 20:44:58 +0200
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FbLzTwPNtwozVlp4kZ0DsjAE3YOIZSOrf/OW2X0FIyRiKyMnAI6reIE+r9wg0wBVnu62HKX3MDFxDxpghFAEog==", "article"=>{"title"=>"Esport", "image"=>#<ActionDispatch::Http::UploadedFile:0x007ff7c7dd27e8 @tempfile=#<Tempfile:/var/folders/83/f2q3jzmx0nnb80cv0sq46b500000gn/T/RackMultipart20180711-20403-1h38hxv.jpeg>, @original_filename="fortnite.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"fortnite.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "text"=>"Si les clubs e-sportifs commencent à occuper une place de plus en plus importante du paysage vidéoludique, leur modèle économique reste un mystère pour beaucoup. Accompagnés par trois équipes françaises qui ont accepté de nous montrer l'envers du décor, nous nous sommes plongés dans « l'e-sport money ».\r\n\r\nEn France, le sport électronique tend à se professionnaliser, notamment sous l'impulsion du législateur qui impose désormais aux équipes agréées d'embaucher leurs joueurs en CDD. Ce statut apporte davantage de sécurité aux employés qu'un contrat d'auto-entreprenariat, mais fait tout de même grincer quelques dents chez certaines équipes.\r\n\r\nQui dit équipes professionnelles, sous-entend modèle économique stable. On imagine en effet difficilement un club sportif de haut niveau mettre la clé sous la porte du jour au lendemain, même si cela peut parfois se produire (les supporters du Le Mans FC en savent quelque chose). Les équipes d'e-sport, contrairement à la croyance populaire, reposent elles aussi sur des bases qui se veulent solides, afin de pouvoir s'inscrire dans la durée.\r\n\r\nNous nous sommes donc penchés sur la manière dont fonctionnent les clubs e-sportifs afin de comprendre comment ils parviennent à vivre d'une discipline dont le modèle économique n'est finalement pas si simple à appréhender. Pour y parvenir, nous nous sommes longuement entretenus avec trois équipes françaises : Gamers Origin, Team LDLC et Vitality.\r\n\r\nQuand l'e-sport emprunte au sport"}, "commit"=>"Create Article"}
+[36m  Disk Storage (15.0ms) [0m[32mUploaded file to key: Bna13kK4gvJhvebvPqWgGJ43 (checksum: zQ4uQ1QcIw+wBwiZtd9pHA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[36mActiveStorage::Blob Create (1.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "Bna13kK4gvJhvebvPqWgGJ43"], ["filename", "fortnite.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 11216], ["checksum", "zQ4uQ1QcIw+wBwiZtd9pHA=="], ["created_at", "2018-07-11 18:44:58.517166"]]
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:22
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:25
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:25
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Esport"], ["text", "Si les clubs e-sportifs commencent à occuper une place de plus en plus importante du paysage vidéoludique, leur modèle économique reste un mystère pour beaucoup. Accompagnés par trois équipes françaises qui ont accepté de nous montrer l'envers du décor, nous nous sommes plongés dans « l'e-sport money ».\r\n\r\nEn France, le sport électronique tend à se professionnaliser, notamment sous l'impulsion du législateur qui impose désormais aux équipes agréées d'embaucher leurs joueurs en CDD. Ce statut apporte davantage de sécurité aux employés qu'un contrat d'auto-entreprenariat, mais fait tout de même grincer quelques dents chez certaines équipes.\r\n\r\nQui dit équipes professionnelles, sous-entend modèle économique stable. On imagine en effet difficilement un club sportif de haut niveau mettre la clé sous la porte du jour au lendemain, même si cela peut parfois se produire (les supporters du Le Mans FC en savent quelque chose). Les équipes d'e-sport, contrairement à la croyance populaire, reposent elles aussi sur des bases qui se veulent solides, afin de pouvoir s'inscrire dans la durée.\r\n\r\nNous nous sommes donc penchés sur la manière dont fonctionnent les clubs e-sportifs afin de comprendre comment ils parviennent à vivre d'une discipline dont le modèle économique n'est finalement pas si simple à appréhender. Pour y parvenir, nous nous sommes longuement entretenus avec trois équipes françaises : Gamers Origin, Team LDLC et Vitality.\r\n\r\nQuand l'e-sport emprunte au sport"], ["created_at", "2018-07-11 18:44:58.530300"], ["updated_at", "2018-07-11 18:44:58.530300"], ["author_id", 1]]
+  ↳ app/controllers/articles_controller.rb:25
+  [1m[36mActiveStorage::Attachment Create (0.8ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Article"], ["record_id", 21], ["blob_id", 4], ["created_at", "2018-07-11 18:44:58.533320"]]
+  ↳ app/controllers/articles_controller.rb:25
+  [1m[36mArticle Update (0.1ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2018-07-11 18:44:58.536079"], ["id", 21]]
+  ↳ app/controllers/articles_controller.rb:25
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:25
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 558729af-356b-4348-b5ce-4e9d569b93b3) to Async(default) with arguments: #<GlobalID:0x007ff7c499bda8 @uri=#<URI::GID gid://blog/ActiveStorage::Blob/4>>
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/articles/21
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 302 Found in 53ms (ActiveRecord: 6.3ms)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [558729af-356b-4348-b5ce-4e9d569b93b3] Performing ActiveStorage::AnalyzeJob (Job ID: 558729af-356b-4348-b5ce-4e9d569b93b3) from Async(default) with arguments: #<GlobalID:0x007ff7c48e2c90 @uri=#<URI::GID gid://blog/ActiveStorage::Blob/4>>
+Started GET "/articles/21" for 127.0.0.1 at 2018-07-11 20:44:58 +0200
+[ActiveJob] [ActiveStorage::AnalyzeJob] [558729af-356b-4348-b5ce-4e9d569b93b3] Skipping image analysis because the mini_magick gem isn't installed
+Processing by ArticlesController#show as HTML
+[ActiveJob] [ActiveStorage::AnalyzeJob] [558729af-356b-4348-b5ce-4e9d569b93b3]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Parameters: {"id"=>"21"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [558729af-356b-4348-b5ce-4e9d569b93b3]   ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [558729af-356b-4348-b5ce-4e9d569b93b3]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 4]]
+  ↳ app/controllers/articles_controller.rb:10
+[ActiveJob] [ActiveStorage::AnalyzeJob] [558729af-356b-4348-b5ce-4e9d569b93b3]   ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [558729af-356b-4348-b5ce-4e9d569b93b3]   [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [558729af-356b-4348-b5ce-4e9d569b93b3]   ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [558729af-356b-4348-b5ce-4e9d569b93b3] Performed ActiveStorage::AnalyzeJob (Job ID: 558729af-356b-4348-b5ce-4e9d569b93b3) from Async(default) in 43.91ms
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 21], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:6
+  Rendered comments/_form.html.erb (3.0ms)
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 21]]
+  ↳ app/views/articles/show.html.erb:33
+  Rendered collection of comments/_comment.html.erb [1 times] (0.9ms)
+  Rendered articles/show.html.erb within layouts/application (23.0ms)
+  Rendered layouts/layout/_header.html.erb (1.4ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 89ms (Views: 76.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--30b3af07728bb2b7d5d326d56eee946af8e90cb4/fortnite.jpeg" for 127.0.0.1 at 2018-07-11 20:44:58 +0200
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--30b3af07728bb2b7d5d326d56eee946af8e90cb4", "filename"=>"fortnite"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: Bna13kK4gvJhvebvPqWgGJ43 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFDYm1FeE0ydExOR2QyU21oMlpXSjJVSEZYWjBkS05ETUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMTFUMTg6NDk6NTguNzU3WiIsInB1ciI6ImJsb2Jfa2V5In19--e7d578393118885f75cc4a225e4d4d1d0d296b2a/fortnite.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22fortnite.jpeg%22%3B+filename%2A%3DUTF-8%27%27fortnite.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFDYm1FeE0ydExOR2QyU21oMlpXSjJVSEZYWjBkS05ETUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMTFUMTg6NDk6NTguNzU3WiIsInB1ciI6ImJsb2Jfa2V5In19--e7d578393118885f75cc4a225e4d4d1d0d296b2a/fortnite.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22fortnite.jpeg%22%3B+filename%2A%3DUTF-8%27%27fortnite.jpeg
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFDYm1FeE0ydExOR2QyU21oMlpXSjJVSEZYWjBkS05ETUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMTFUMTg6NDk6NTguNzU3WiIsInB1ciI6ImJsb2Jfa2V5In19--e7d578393118885f75cc4a225e4d4d1d0d296b2a/fortnite.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22fortnite.jpeg%22%3B+filename%2A%3DUTF-8%27%27fortnite.jpeg" for 127.0.0.1 at 2018-07-11 20:44:58 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"fortnite.jpeg\"; filename*=UTF-8''fortnite.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFDYm1FeE0ydExOR2QyU21oMlpXSjJVSEZYWjBkS05ETUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMTFUMTg6NDk6NTguNzU3WiIsInB1ciI6ImJsb2Jfa2V5In19--e7d578393118885f75cc4a225e4d4d1d0d296b2a", "filename"=>"fortnite"}
+[36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: Bna13kK4gvJhvebvPqWgGJ43[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.1ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-11 20:46:04 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/welcome/index.html.erb:4
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 9]]
+  ↳ app/views/welcome/index.html.erb:26
+  Rendered welcome/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/layout/_header.html.erb (2.3ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 90ms (Views: 77.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-07-11 20:46:12 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:15
+  Rendered articles/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/layout/_header.html.erb (1.4ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 69ms (Views: 60.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/18" for 127.0.0.1 at 2018-07-11 20:46:16 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 18], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:6
+  Rendered comments/_form.html.erb (2.3ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 18]]
+  ↳ app/views/articles/show.html.erb:33
+  Rendered collection of comments/_comment.html.erb [2 times] (1.3ms)
+  Rendered articles/show.html.erb within layouts/application (22.5ms)
+  Rendered layouts/layout/_header.html.erb (1.4ms)
+  Rendered layouts/layout/_footer.html.erb (0.3ms)
+Completed 200 OK in 101ms (Views: 86.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dba243eb491c33cf82a4c20982d56251efc887c5/chess-1483735_1280.jpg" for 127.0.0.1 at 2018-07-11 20:46:16 +0200
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dba243eb491c33cf82a4c20982d56251efc887c5", "filename"=>"chess-1483735_1280"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/geraldy/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: 3kyykRkvbCdMFbySU2oC9bqD (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDB6YTNsNWExSnJkbUpEWkUxR1lubFRWVEp2UXpsaWNVUUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMTFUMTg6NTE6MTYuMTM3WiIsInB1ciI6ImJsb2Jfa2V5In19--75289721a5522c1fac2318fb850347cfc1ad8f45/chess-1483735_1280.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chess-1483735_1280.jpg%22%3B+filename%2A%3DUTF-8%27%27chess-1483735_1280.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDB6YTNsNWExSnJkbUpEWkUxR1lubFRWVEp2UXpsaWNVUUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMTFUMTg6NTE6MTYuMTM3WiIsInB1ciI6ImJsb2Jfa2V5In19--75289721a5522c1fac2318fb850347cfc1ad8f45/chess-1483735_1280.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chess-1483735_1280.jpg%22%3B+filename%2A%3DUTF-8%27%27chess-1483735_1280.jpg
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDB6YTNsNWExSnJkbUpEWkUxR1lubFRWVEp2UXpsaWNVUUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMTFUMTg6NTE6MTYuMTM3WiIsInB1ciI6ImJsb2Jfa2V5In19--75289721a5522c1fac2318fb850347cfc1ad8f45/chess-1483735_1280.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chess-1483735_1280.jpg%22%3B+filename%2A%3DUTF-8%27%27chess-1483735_1280.jpg" for 127.0.0.1 at 2018-07-11 20:46:16 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"chess-1483735_1280.jpg\"; filename*=UTF-8''chess-1483735_1280.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDB6YTNsNWExSnJkbUpEWkUxR1lubFRWVEp2UXpsaWNVUUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDctMTFUMTg6NTE6MTYuMTM3WiIsInB1ciI6ImJsb2Jfa2V5In19--75289721a5522c1fac2318fb850347cfc1ad8f45", "filename"=>"chess-1483735_1280"}
+[36m  Disk Storage (1.0ms) [0m[34mDownloaded file from key: 3kyykRkvbCdMFbySU2oC9bqD[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
